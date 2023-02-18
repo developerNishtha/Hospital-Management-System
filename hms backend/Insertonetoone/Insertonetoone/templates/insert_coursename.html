@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="w3-container" style="margin-left:15%; margin-top: 45px;">
+        <div class="col-sm-offset-1 col-sm-11" style="margin-top: 70px; margin-bottom: 10px;">
+      
+            <a href="{% url 'Insertcoursename' %}"><button type="submit" class="btn btn-default" style="width:40%;">Create new</button></a>
+            <a href="{% url 'showcoursename' %}"><button type="submit" class="btn btn-default" style="width: 40%;">Show all </button></a>
+        </div>
+    </div>
+    <form action="" method="POST">
+         {% csrf_token %}
+        <div class="div5 divs">
+            <input type="text" name="cname" placeholder=" cname">
+        </div>
+        <div class="div5 divs"><button>clear </button> </div>
+        <div class="div6 divs"><button>save</button> </div>
+    </form>
+    {% if messages %}
+        {%for mess in messages %}
+        <b>{{mess}}</b>
+        {% endfor %}
+        {% endif %} 
+
+        <div class="outer">
+            <div class="table-wrapper">
+                <table class="table table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>cname</th>
+                            
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                        {% for result in data %}
+                        <tr>
+                          <td>{{result.id}}</td>
+                          <td>{{result.cname}}</td>
+                          <td> <a href="{% url 'Insertcoursedetails' courseid=result.id %}">add course details</a> </td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+</body>
+</html>

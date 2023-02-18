@@ -1,0 +1,103 @@
+{% extends 'ipd_registration.html' %} 
+{% block body %}
+<form class="form-horizontal" method="POST">
+    {% csrf_token %}
+    <div class="">
+        <div class="">
+            <div class="flex-container3">
+
+                <div class="div5 divs"> <input name="registration_time" type="text"  onfocus="(this.type = 'time')" class="form-control" id="time" placeholder="Registration Time"></div>
+                <div class="div6 divs">
+                    <input name="registration_date" placeholder="Registration Date" type="text"
+                    onfocus="(this.type = 'date')" id="date" class="form-control"> </div>
+                <div class="div7 divs"> <input name="patient_category" placeholder=" Patient Category"
+                        class="form-control" type="text"> </div>
+            </div>
+            <div class="flex-container3">
+
+                <div class="div5 divs"><input name="Admission number" placeholder="Admission number"
+                        class="form-control" type="text"> </div>
+                <div class="div6 divs"> <input name="Admission For" placeholder="Admission For"
+                        class="form-control" type="text"></div>
+                <div class="div7 divs"><input name="Referred by" placeholder="Referred by" class="form-control"
+                        type="text"></div>
+            </div>
+            <div class="flex-container3">
+
+                <div class="div5 divs"><input name="Dr Name" placeholder="Dr Name" class="form-control"
+                        type="text"> </div>
+                <div class="div6 divs"> <input name="2 consultant Dr" placeholder="2 consultant Dr"
+                        class="form-control" type="text"></div>
+                <div class="div7 divs"><input name="Reason for Admission" placeholder="Reason for Admission"
+                        class="form-control" type="text"> </div>
+            </div>
+            <div class="flex-container3">
+
+                <div class="div5 divs"><input name="Package name" placeholder="Package name"
+                        class="form-control" type="text"> </div>
+                <div class="div6 divs"> <input name="Admit Condition" placeholder="Admit Condition"
+                        class="form-control" type="text"></div>
+                <div class="div7 divs ">
+
+                    <div class="ward">
+                        <div class="input">
+                            <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span> -->
+                            <select name="department" class="form-control selectpicker">
+                                <option value="" style="text-align: center;">ward ⇓</option>
+                                <option>C</option>
+                                <option>B</option>
+                                <option>A</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex-container3">
+
+                <div class="div5 divs"><input name="Relative name" placeholder="Relative name"
+                        class="form-control" type="text"> </div>
+                <div class="div6 divs"> <input name="Relation" placeholder="Relation" class="form-control"
+                        type="text"></div>
+                <div class="div7 divs ">
+                    <div class="ward">
+                    <div class="input">
+                        <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span> -->
+                        <select name="department" class="form-control selectpicker">
+                            <option value="" style="text-align: center;">Bed ⇓</option>
+                            <option>C</option>
+                            <option>B</option>
+                            <option>A</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="flex-container3">
+
+                <div class="div5 divs"><input name="Relative phone number" placeholder="Relative Phone Number"
+                        class="form-control" type="text"> </div>
+                <div class="div6 divs"> <input name="Address of Relative" placeholder="Address of Relative"
+                        class="form-control" type="text"> </div>
+                <div class="div7 divs"> </div>
+            </div>
+            <div class="flex-container3">
+
+                <div class="div5 divs"><button>clear </button> <button>save</button> </div>
+                <div class="div6 divs"> </div>
+                <div class="div7 divs"> </div>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+{% if messages %}
+{%for mess in messages %}
+<b>{{mess}}</b>
+{% endfor %}
+{% endif %}
+
+{% endblock body %}

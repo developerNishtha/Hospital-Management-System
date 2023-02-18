@@ -1,0 +1,41 @@
+{% extends 'diagnosis.html' %}
+
+{% block body %}
+<form action="/Update/{{Empmodel.id}}" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label class="control-label col-sm-1" for=""> ID</label>
+      <div class="col-sm-11">
+        <input type="text" name="id" class="form-control" value="{{Empmodel.id}}" readonly id=""
+          placeholder="Enter Provisional Diagnosis " style="height: 80px; width: 40%;display: inline-block;">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="">Provisional Diagnosis</label>
+      <div class="col-sm-11">
+        <input type="text" name="previousdiagnosis" class="form-control" value="{{Empmodel.previousdiagnosis}}" id=""
+          placeholder="Enter Provisional Diagnosis " style="height: 80px; width: 40%;display: inline-block;">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="">Final Diagnosis</label>
+      <div class="col-sm-11">
+        <input type="text" name="finaldiagnosis" class="form-control" value="{{Empmodel.finaldiagnosis}}" id="" placeholder="Enter Final Diagnosis "
+          style="height: 80px; width: 40%; display: inline-block;">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-1 col-sm-11">
+        <!-- <button type="submit" class="btn btn-default">Clear</button> -->
+        <button type="submit" class="btn btn-default">save </button>
+        {% if messages %}
+  {%for mess in messages %}
+  <b>{{mess}}</b>
+  {% endfor %}
+  {% endif %}
+      </div>
+
+    </div>
+  </form>
+{% endblock body%}

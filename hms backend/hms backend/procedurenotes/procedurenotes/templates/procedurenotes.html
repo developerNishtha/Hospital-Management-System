@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HomePage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+        *:focus {
+            outline: none;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: #dbe2ef;
+
+        }
+
+
+        .outer-wrapper {
+            margin: 10px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.9);
+            /*max-width: fit-content;*/
+            max-height: fit-content;
+            width: 100%;
+        }
+
+        .table-wrapper {
+            overflow-y: scroll;
+            overflow-x: scroll;
+            height: fit-content;
+            max-height: 70.4vh;
+            padding-bottom: 20px;
+        }
+
+        table {
+            min-width: max-content;
+            border-collapse: separate;
+            border-spacing: 0px;
+        }
+
+        table th {
+            position: sticky;
+            top: 0px;
+            background-color: #133b5c;
+            color: white;
+            text-align: center;
+            font-weight: normal;
+            font-size: 18px;
+            outline: 0.7px solid black;
+            border: 1.5px solid black;
+
+        }
+
+        table th,
+        table td {
+            padding: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        table td {
+            text-align: left;
+            font-size: 15px;
+            border: 1px solid rgb(177, 177, 177);
+            padding-left: 20px;
+
+        }
+
+        .nb {
+            background-color: #112d4e;
+            color: white;
+        }
+
+        .nb-content {
+            padding: 20px;
+        }
+
+        .rightpart a:visited {
+            color: white;
+        }
+
+        .flex-container3 {
+            display: flex;
+            flex-direction: row;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 0.5%;
+            color: black;
+
+
+        }
+
+        .vertical {
+            flex-direction: column;
+        }
+
+        .horizontal {
+            flex-direction: row;
+        }
+
+        .div5 {
+            flex: 1;
+        }
+
+        .div6 {
+            flex: 1;
+        }
+
+        .div7 {
+            flex: 1;
+        }
+
+
+
+        .flex-container3>div>input {
+
+            width: 95%;
+            margin-bottom: 1%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 14px;
+
+
+
+        }
+
+        .ward {
+
+            width: 95%;
+            margin-bottom: 1%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 14px;
+
+
+
+        }
+
+
+        .flex-container3>div>button {
+
+            width: 25%;
+            margin-bottom: 1%;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="w3-bar w3-small navbar-fixed-top"
+        style="margin: 0; padding: 0;height: 8%; color: white; background-color: #112d4e;">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="img" style="text-align:left ;"><img src="" alt="logo"></div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <h3>Hospital Name</h3>
+                </div>
+
+                <div class="col-md-4 rightpart" style="display: inline; text-align: right;">
+                    <h3><a href="">Home </a>&nbsp; <a href=""> Logout</a></h3>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="w3-sidebar w3-bar-block  w3-card nb " style="width: 15%;height: 92%;">
+
+        <button class="w3-button w3-block w3-left-align nb-content" onclick="myRecFunc()">
+            Reception&nbsp;<i class="fa fa-caret-down"></i>
+        </button>
+        <div id="demoReception" class="w3-hide w3-white w3-card ">
+            <a href="#" class="w3-bar-item w3-button ">Appointment</a>
+            <a href="#" class="w3-bar-item w3-button ">Certificate</a>
+            <a href="#" class="w3-bar-item w3-button ">ViewAll Appointments</a>
+        </div>
+
+        <button class="w3-button w3-block w3-left-align nb-content" onclick="myOPDFunc()">
+            OPD&nbsp;<i class="fa fa-caret-down"></i>
+        </button>
+        <div id="demoAcc" class="w3-hide w3-white w3-card">
+            <a href="#" class="w3-bar-item w3-button">Complain</a>
+            <a href="#" class="w3-bar-item w3-button">PFSH</a>
+            <a href="#" class="w3-bar-item w3-button">Examination</a>
+            <a href="#" class="w3-bar-item w3-button">Diagnosis</a>
+            <a href="#" class="w3-bar-item w3-button">RX</a>
+            <a href="#" class="w3-bar-item w3-button">Advice</a>
+        </div>
+
+        <button class="w3-button w3-block w3-left-align nb-content" onclick="myIPDFunc()">
+            IPD&nbsp;<i class="fa fa-caret-down"></i>
+        </button>
+        <div id="demoIPD" class="w3-hide w3-white w3-card">
+            <a href="#" class="w3-bar-item w3-button">registration</a>
+            <a href="#" class="w3-bar-item w3-button">Complaint</a>
+            <a href="#" class="w3-bar-item w3-button">PFSH</a>
+            <a href="#" class="w3-bar-item w3-button">Examination</a>
+            <a href="#" class="w3-bar-item w3-button">Diagnosis</a>
+            <a href="#" class="w3-bar-item w3-button">Round Note</a>
+            <a href="#" class="w3-bar-item w3-button">OT Schedule</a>
+            <a href="#" class="w3-bar-item w3-button">Procedure Notes</a>
+            <a href="#" class="w3-bar-item w3-button">Discharge Summary</a>
+            <a href="#" class="w3-bar-item w3-button">ViewAll OTSchedule</a>
+            <a href="#" class="w3-bar-item w3-button">ViewAll BedAllocation</a>
+        </div>
+
+        <button class="w3-button w3-block w3-left-align nb-content" onclick="myBillFunc()">
+            Billing&nbsp;<i class="fa fa-caret-down"></i>
+        </button>
+        <div id="demoBill" class="w3-hide w3-white w3-card">
+            <a href="#" class="w3-bar-item w3-button">Estimate</a>
+            <a href="#" class="w3-bar-item w3-button">OPD Billing</a>
+            <a href="#" class="w3-bar-item w3-button">IPD Billing</a>
+            <a href="#" class="w3-bar-item w3-button">Opening/Closing Cash entry</a>
+            <a href="#" class="w3-bar-item w3-button">Receipt</a>
+            <a href="#" class="w3-bar-item w3-button">Refund</a>
+            <a href="#" class="w3-bar-item w3-button">Expense Entry</a>
+            <a href="#" class="w3-bar-item w3-button">ViewAll Estimate</a>
+            <a href="#" class="w3-bar-item w3-button">ViewAll OPDBilling</a>
+            <a href="#" class="w3-bar-item w3-button">ViewAll IPDBilling</a>
+            <a href="#" class="w3-bar-item w3-button">viewAll Receipts</a>
+            <a href="#" class="w3-bar-item w3-button">ViewAll refunds</a>
+        </div>
+
+
+    </div>
+
+    <div class="w3-container" style="margin-left:15%; margin-top: 45px;">
+        <a href="{% url 'Insertprocedurenotes' %}"><button type="submit" class="btn btn-default" style="width:40%;">Create new</button></a>
+        <a href="{% url 'showprocedurenotes' %}"><button type="submit" class="btn btn-default" style="width: 40%;">Show all </button></a>
+      
+<form method="POST" >
+            {% csrf_token %}
+            <div class="">
+                <div class="">
+
+                    <div class="flex-container3">
+
+                        <div class="div5 divs">
+                            <h2>Add New Procedure Notes</h2>
+                        </div>
+                        <div class="div6 divs"> </div>
+                        <div class="div7 divs"> </div>
+                    </div>
+
+
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><input placeholder="Procedure Date" type="text" name="procedure_date"
+                                onfocus="(this.type = 'date')" id="date" class="form-control"></div>
+                        <div class="div6 divs">
+                            <input  name="procedure_name" placeholder="Procedure Name" class="form-control" type="text">
+                        </div>
+                        <div class="div7 divs">
+                            <div class="ward">
+                                <div class="input">
+                                    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span> -->
+                                    <select class="form-control selectpicker" name="ot_name" >
+                                        <option value="" style="text-align: center;">OT Name ⇓</option>
+                                        <option>C</option>
+                                        <option>B</option>
+                                        <option>A</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><input placeholder="Procedure Time" type="text"
+                                onfocus="(this.type = 'time')" id="time" name="procedure_time" class="form-control"> </div>
+                        <div class="div6 divs"> <input placeholder="In time" name="in_time" type="text" onfocus="(this.type = 'time')"
+                                id="time" class="form-control"></div>
+                        <div class="div7 divs "><input placeholder="Out time" name="out_time" type="text" onfocus="(this.type = 'time')" id="time"
+                                class="form-control">
+                        </div>
+                    </div>
+                     <div class="flex-container3">
+
+                        <div class="div5 divs"><input name="surgeon_name" placeholder="Surgeon Name"
+                                class="form-control" type="text"> </div>
+                        <div class="div6 divs"> <input name="assistant_surgeon_1" placeholder="Assistant Surgeon 1"
+                                class="form-control" type="text"></div>
+                        <div class="div7 divs"><input name="assistant_surgeon_2" placeholder="Assistant Surgeon 2"
+                                class="form-control" type="text">
+                        </div>
+                    </div> 
+                     <div class="flex-container3">
+
+                        <div class="div5 divs"><input name="anastheiologist" placeholder="Anastheiologist"
+                                class="form-control" type="text"> </div>
+                        <div class="div6 divs"> <input name="procedure_type" placeholder="Procedure Type"
+                                class="form-control" type="text"></div>
+                        <div class="div7 divs ">
+                            <input name="symoptom_of_infection" placeholder="Symptom of infection" class="form-control"
+                                type="text">
+                        </div>
+                    </div>  
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><input name="culture_report" placeholder="Culture Report"
+                                class="form-control" type="text"> </div>
+                        <div class="div6 divs"> <input name="operation_status" placeholder="Operation Status"
+                                class="form-control" type="text"></div>
+                        <div class="div7 divs"> <input name="risk_factors" placeholder="Risk Factors"
+                                class="form-control" type="text"></div>
+                    </div>  
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><input name="anasthesia_notes" placeholder="Anasthesia Notes"
+                                class="form-control" type="text"> </div>
+                        <div class="div6 divs"> <input name="pre_operative_notes" placeholder="Pre-operative Notes"
+                                class="form-control" type="text"></div>
+                        <div class="div7 divs"> <input name="post_operative_notes" placeholder="Post-operative Notes"
+                                class="form-control" type="text"></div>
+                    </div> 
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><input name="procedure_notes" placeholder="Procedure Notes"
+                                class="form-control" type="text"> </div>
+                        <div class="div6 divs"> <input name="remarks" placeholder="Remarks"
+                                class="form-control" type="text"></div>
+                        
+                    </div>  
+                </div>
+
+                <div class="flex-container3">
+
+                    <div class="div5 divs"><button>clear </button> <button>save</button> </div>
+                    <div class="div6 divs"> </div>
+                    <div class="div7 divs"> </div>
+                </div>
+            </div>
+
+    </div>
+</form>
+</div>
+
+    <div class="w3-container" style="margin-left:15%">
+
+        </form>
+        <h2>Previous Procedure Notes</h2>
+        <div class="outer">
+            <div class="table-wrapper">
+                <table class="table table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Procedure Date</th>
+                            <th>Procedure Time</th>
+                            <th>In Time</th>
+                            <th>Out Time</th>
+                            <th>Procedure Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for result in data %}
+                            <tr>
+                              <td>{{result.procedure_date}}</td>
+                              <td>{{result.procedure_time}}</td>
+                              <td>{{result.in_time}}</td>
+                              <td>{{result.out_time}}</td>
+                              <td>{{result.procedure_type}}</td>
+                              <td><a href="Delete/{{result.id}}">delete </a></td>
+                              <td><a href="Edit/{{result.id}}">edit </a></td>
+                            </tr>
+                            {% endfor %}
+                         
+                          </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+<form method="POST" action="/Update/{{procedurenotesmodel.id}} >
+            {% csrf_token %}
+            <div class="">
+                <div class="">
+
+                    <div class="flex-container3">
+
+                        <div class="div5 divs">
+                            <h2>Add New Procedure Notes</h2>
+                        </div>
+                        <div class="div6 divs"> </div>
+                        <div class="div7 divs"> </div>
+                    </div>
+
+
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><input placeholder="Procedure Date" type="text" name="procedure_date" value="{{procedurenotesmodel.procedure_date}}"
+                                onfocus="(this.type = 'date')" id="date" class="form-control"></div>
+                        <div class="div6 divs">
+                            <input  name="procedure_name" value="{{procedurenotesmodel.procedure_name}}"  placeholder="Procedure Name" class="form-control" type="text">
+                        </div>
+                        <div class="div7 divs">
+                            <div class="ward">
+                                <div class="input">
+                                    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span> -->
+                                    <select class="form-control selectpicker" value="{{procedurenotesmodel.ot_name}}" name="ot_name" >
+                                        <option value="" style="text-align: center;">OT Name ⇓</option>
+                                        <option>C</option>
+                                        <option>B</option>
+                                        <option>A</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><input placeholder="Procedure Time" type="text" value="{{procedurenotesmodel.procedure_time}}"
+                                onfocus="(this.type = 'time')" id="time" name="procedure_time" class="form-control"> </div>
+                        <div class="div6 divs"> <input placeholder="In time" name="in_time" type="text" onfocus="(this.type = 'time')" value="{{procedurenotesmodel.in_time}}"
+                                id="time" class="form-control"></div>
+                        <div class="div7 divs "><input placeholder="Out time" name="out_time" type="text" onfocus="(this.type = 'time')" id="time" value="{{procedurenotesmodel.out_time}}"
+                                class="form-control">
+                        </div>
+                    </div>
+                     <div class="flex-container3">
+
+                        <div class="div5 divs"><input name="surgeon_name" placeholder="Surgeon Name" value="{{procedurenotesmodel.surgeon_name}}"
+                                class="form-control" type="text"> </div>
+                        <div class="div6 divs"> <input name="assistant_surgeon_1" placeholder="Assistant Surgeon 1" value="{{procedurenotesmodel.assistant_surgeon_1}}"
+                                class="form-control" type="text"></div>
+                        <div class="div7 divs"><input name="assistant_surgeon_2" placeholder="Assistant Surgeon 2" value="{{procedurenotesmodel.assistant_surgeon_2}}"
+                                class="form-control" type="text">
+                        </div>
+                    </div> 
+                     <div class="flex-container3">
+
+                        <div class="div5 divs"><input name="anastheiologist" placeholder="Anastheiologist" value="{{procedurenotesmodel.anastheiologist}}"
+                                class="form-control" type="text"> </div>
+                        <div class="div6 divs"> <input name="procedure_type" placeholder="Procedure Type" value="{{procedurenotesmodel.procedure_type}}"
+                                class="form-control" type="text"></div>
+                        <div class="div7 divs ">
+                            <input name="symoptom_of_infection" placeholder="Symptom of infection" class="form-control" value="{{procedurenotesmodel.symoptom_of_infection}}"
+                                type="text">
+                        </div>
+                    </div>  
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><input name="culture_report" placeholder="Culture Report" value="{{procedurenotesmodel.symoptom_of_infection}}"
+                                class="form-control" type="text"> </div>
+                        <div class="div6 divs"> <input name="operation_status" placeholder="Operation Status" value="{{procedurenotesmodel.symoptom_of_infection}}"
+                                class="form-control" type="text"></div>
+                        <div class="div7 divs"> <input name="risk_factors" placeholder="Risk Factors" value="{{procedurenotesmodel.symoptom_of_infection}}"
+                                class="form-control" type="text"></div>
+                    </div>  
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><input name="anasthesia_notes" placeholder="Anasthesia Notes" value="{{procedurenotesmodel.anasthesia_notes}}"
+                                class="form-control" type="text"> </div>
+                        <div class="div6 divs"> <input name="pre_operative_notes" placeholder="Pre-operative Notes" value="{{procedurenotesmodel.pre_operative_notes}}"
+                                class="form-control" type="text"></div>
+                        <div class="div7 divs"> <input name="post_operative_notes" placeholder="Post-operative Notes" value="{{procedurenotesmodel.post_operative_notes}}"
+                                class="form-control" type="text"></div>
+                    </div> 
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><input name="procedure_notes" placeholder="Procedure Notes" value="{{procedurenotesmodel.procedure_notes}}"
+                                class="form-control" type="text"> </div>
+                        <div class="div6 divs"> <input name="remarks" placeholder="Remarks" value="{{procedurenotesmodel.remarks}}"
+                                class="form-control" type="text"></div>
+                        
+                    </div>  
+                </div>
+
+                <div class="flex-container3">
+
+                    <div class="div5 divs"><button>clear </button> <button>save</button> </div>
+                    <div class="div6 divs"> </div>
+                    <div class="div7 divs"> </div>
+                </div>
+            </div>
+
+    </div>
+</form>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+</div>
+
+    <script>
+
+        function myRecFunc() {
+            var x = document.getElementById("demoReception");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-blue";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-blue", "");
+            }
+        }
+        function myOPDFunc() {
+            var x = document.getElementById("demoAcc");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-blue";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-blue", "");
+            }
+        }
+
+        function myIPDFunc() {
+            var x = document.getElementById("demoIPD");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-blue";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-blue", "");
+            }
+        }
+
+        function myBillFunc() {
+            var x = document.getElementById("demoBill");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-blue";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-blue", "");
+            }
+        }
+    </script>
+</body>
+
+</html>

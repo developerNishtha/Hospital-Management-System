@@ -1,0 +1,190 @@
+<html>
+
+  <head>
+    <title>HomePage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+    *:focus {
+        outline: none;
+    }
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: #dbe2ef;
+    }
+
+    #login-box {
+        position: relative;
+        margin: 5% auto;
+        width: auto;
+        height: auto;
+        background: #dbe2ef;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .outer-wrapper {
+        margin: 10px;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.9);
+        /*max-width: fit-content;*/
+        max-height: fit-content;
+        width: 100%;
+    }
+
+    .table-wrapper {
+        overflow-y: scroll;
+        overflow-x: scroll;
+        height: fit-content;
+        max-height: 70.4vh;
+        padding-bottom: 20px;
+    }
+
+    table {
+        min-width: max-content;
+        border-collapse: separate;
+        border-spacing: 0px;
+    }
+
+    table th {
+        position: sticky;
+        top: 0px;
+        background-color: #133b5c;
+        color: white;
+        text-align: center;
+        font-weight: normal;
+        font-size: 18px;
+        outline: 0.7px solid black;
+        border: 1.5px solid black;
+
+    }
+
+    table th,
+    table td {
+        padding: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+
+    table td {
+        text-align: left;
+        font-size: 15px;
+        border: 1px solid rgb(177, 177, 177);
+        padding-left: 20px;
+
+    }
+
+    .nb {
+        background-color: #112d4e;
+        color: white;
+    }
+
+    .nb-content {
+        padding: 20px;
+    }
+
+    .rightpart a:visited{
+        color: white;
+    }
+    
+    </style>
+
+  </head>
+  <body>
+
+    <nav class="w3-bar w3-small navbar-fixed-top" style="margin: 0; padding: 0;height: 8%; color: white; background-color: #112d4e;">
+        
+        <div class="container-fluid">
+        
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="img" style="text-align:left ;"><img src="" alt="logo"></div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <h3>Hospital Name</h3>
+                </div>
+
+                <div class="col-md-4 rightpart" style="display: inline; text-align: right;">
+                    <h3><a href="D:\hospital management\final things\homepage.html ">Home </a>&nbsp; <a href="D:\hospital management\final things\signup.html"> Logout</a></h3>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="w3-sidebar w3-bar-block  w3-card nb " style="width: 15%;height: 92%;">
+        
+        <button class="w3-button w3-block w3-left-align nb-content" onclick="myRecFunc()">
+        Reception&nbsp;<i class="fa fa-caret-down"></i>
+        </button>
+        <div id="demoReception" class="w3-hide w3-white w3-card ">
+        <a href="D:\hospital management\final things\Appointment.html" class="w3-bar-item w3-button ">Appointment</a>
+        <a href="#" class="w3-bar-item w3-button ">Certificate</a>
+        <a href="D:\hospital management\final things\viewappointment.html" class="w3-bar-item w3-button ">ViewAll Appointments</a>
+        </div>
+
+      <button class="w3-button w3-block w3-left-align nb-content" onclick="myOPDFunc()">
+        OPD&nbsp;<i class="fa fa-caret-down"></i>
+      </button>
+      <div id="demoAcc" class="w3-hide w3-white w3-card">
+        <a href="D:\hospital management\final things\complain.html" class="w3-bar-item w3-button">Complain</a>
+        <a href="D:\hospital management\final things\pfsh.html" class="w3-bar-item w3-button">PFSH</a>
+        <a href="D:\hospital management\final things\examination.html" class="w3-bar-item w3-button">Examination</a>
+        <a href="D:\hospital management\final things\diagnosis.html" class="w3-bar-item w3-button">Diagnosis</a>
+        <a href="D:\hospital management\final things\OPDrx (1).html" class="w3-bar-item w3-button">RX</a>
+        <a href="#" class="w3-bar-item w3-button">Advice</a>
+      </div>
+
+      <button class="w3-button w3-block w3-left-align nb-content" onclick="myIPDFunc()">
+        IPD&nbsp;<i class="fa fa-caret-down"></i>
+      </button>
+      <div id="demoIPD" class="w3-hide w3-white w3-card">
+        <a href="D:\hospital management\final things\ipdregistration.html" class="w3-bar-item w3-button">registration</a>
+        <a href="D:\hospital management\final things\IPDcomplaint.html" class="w3-bar-item w3-button">Complaint</a>
+        <a href="D:\hospital management\final things\pfsh.html" class="w3-bar-item w3-button">PFSH</a>
+        <a href="D:\hospital management\final things\examination.html" class="w3-bar-item w3-button">Examination</a>
+        <a href="D:\hospital management\final things\diagnosis.html" class="w3-bar-item w3-button">Diagnosis</a>
+        <a href="D:\hospital management\final things\roundnotes.html" class="w3-bar-item w3-button">Round Note</a>
+        <a href="D:\hospital management\final things\OT_schedule.html" class="w3-bar-item w3-button">OT Schedule</a>
+        <a href="D:\hospital management\final things\procedurenotes.html" class="w3-bar-item w3-button">Procedure Notes</a>
+        <a href="D:\hospital management\final things\IPDdischarge.html" class="w3-bar-item w3-button">Discharge Summary</a>
+        <a href="D:\hospital management\final things\viewallotschedule.html" class="w3-bar-item w3-button">ViewAll OTSchedule</a>
+        <a href="D:\hospital management\final things\viewallotschedule.html" class="w3-bar-item w3-button">ViewAll BedAllocation</a>
+      </div>
+
+      <button class="w3-button w3-block w3-left-align nb-content" onclick="myBillFunc()">
+        Billing&nbsp;<i class="fa fa-caret-down"></i>
+      </button>
+      <div id="demoBill" class="w3-hide w3-white w3-card">
+        <a href="D:\hospital management\final things\BillingEstimate.html" class="w3-bar-item w3-button">Estimate</a>
+        <a href="D:\hospital management\final things\opdbilling.html" class="w3-bar-item w3-button">OPD Billing</a>
+        <a href="D:\hospital management\final things\ipdbilling.html" class="w3-bar-item w3-button">IPD Billing</a>
+        <a href="D:\hospital management\final things\OpenCloseEntry.html" class="w3-bar-item w3-button">Opening/Closing Cash entry</a>
+        <a href="D:\hospital management\final things\receipt.html" class="w3-bar-item w3-button">Receipt</a>
+        <a href="#" class="w3-bar-item w3-button">Refund</a>
+        <a href="D:\hospital management\final things\expenseentry.html" class="w3-bar-item w3-button">Expense Entry</a>
+        <a href="#" class="w3-bar-item w3-button">ViewAll Estimate</a>
+        <a href="#" class="w3-bar-item w3-button">ViewAll OPDBilling</a>
+        <a href="#" class="w3-bar-item w3-button">ViewAll IPDBilling</a>
+        <a href="#" class="w3-bar-item w3-button">viewAll Receipts</a>
+        <a href="#" class="w3-bar-item w3-button">ViewAll refunds</a>
+      </div>
+
+
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HomePage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+        *:focus {
+            outline: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: #dbe2ef;
+        }
+
+        .rightpart a:visited {
+            color: white;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            /* margin-left: 5px; */
+            margin: auto 2%;
+        }
+
+        .flex-container>div {
+            width: 20%;
+        }
+
+        .flex-container>div>button {
+
+            width: 240px;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+
+        }
+
+        .outer-wrapper {
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.9);
+            /*max-width: fit-content;*/
+            max-height: fit-content;
+            width: 100%;
+        }
+
+        .table-wrapper {
+            overflow-y: scroll;
+            overflow-x: scroll;
+            height: fit-content;
+            max-height: 70.4vh;
+            padding-bottom: 20px;
+        }
+
+        .flex-container2 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .divs {
+            margin: 3px;
+        }
+
+        .div3 {
+            flex: 2;
+            margin: auto 2%;
+        }
+
+        .div4 {
+            flex: 5;
+        }
+
+        .box1 {
+            border: 1 solid black;
+        }
+
+        .flex-container3 {
+            display: flex;
+            flex-direction: row;
+            margin-left: 5%;
+        }
+
+        .vertical {
+            flex-direction: column;
+        }
+
+        .horizontal {
+            flex-direction: row;
+        }
+
+        .div5 {
+            flex: 1;
+        }
+
+        .div6 {
+            flex: 1;
+        }
+
+        .div7 {
+            flex: 1;
+        }
+
+        .flex-container3>div>button {
+
+            width: 240px;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="w3-bar w3-small" style="margin: 0; padding: 0;height: 8%; color: white; background-color: #112d4e;">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="img" style="text-align:left ;"><img src="" alt="logo"></div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <h3>Hospital Name</h3>
+                </div>
+
+                <div class="col-md-4 rightpart" style="display: inline; text-align: right;">
+                    <h3><a href="">Home </a>&nbsp; <a href=""> Logout</a></h3>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-container">
+        <div><button><a href="D:\hospital management\final things\homepage.html">Patient</a> </button> </div>
+        <div><button>View appointments</button></div>
+        <div><button>view billings</button></div>
+        <div><button>view bed status</button></div>
+        <div><button>view ot schedules</button></div>
+
+    </div>
+
+    <div class="flex-container2">
+        <div class="div3 divs">
+            <div class="outer-wrapper">
+                <div class="table-wrapper">
+                    <div class="box1">
+                        <form class="well form-horizontal" action=" " method="post" id="contact_form">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="control-label p-1 p-1">UHID</label>
+                                    <div class="inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span>
+                                            <input name="UHID" placeholder="UHID" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+
+
+                                <!-- Text input-->
+
+
+                                <!-- Text input-->
+
+
+
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="control-label p-1 p-1">First Name</label>
+                                    <div class="inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span>
+                                            <input name="first_name" placeholder="First Name" class="form-control"
+                                                type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="control-label p-1">Middle Name</label>
+                                    <div class="inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span>
+                                            <input name="Middle name" placeholder="Middle Name" class="form-control"
+                                                type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="control-label p-1">Last Name</label>
+                                    <div class="inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span>
+                                            <input name="last_name" placeholder="Last Name" class="form-control"
+                                                type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label class="control-label p-1">Gender ⇓</label>
+                                    <div class="selectContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-list"></i></span>
+                                            <select name="department" class="form-control selectpicker">
+                                                <option value="">Gender ⇓</option>
+                                                <option>M</option>
+                                                <option>F</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label p-1">Age</label>
+                                    <div class="inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span>
+                                            <input name="Age" placeholder="Age" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label p-1">Weight</label>
+                                    <div class="inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span>
+                                            <input name="Weight" placeholder="Weight" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label p-1">Height</label>
+                                    <div class="inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span>
+                                            <input name="Height" placeholder="Height" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Select Basic -->
+
+                                <!-- Success message -->
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="div4 divs">
+            <div class="outer-wrapper">
+                <div class="table-wrapper">
+
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><h1>Reception</h1></div>
+                        <div class="div6 divs"> </div>
+                        <div class="div7 divs"> </div>
+                    </div>
+
+                    
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>Bills</button> </div>
+                        <div class="div6 divs"><button>Appointment</button> </div>
+                        <div class="div7 divs"><button>Certificate</button> </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><h1>OPD Consultation</h1> </div>
+                        
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>Complaint</button> </div>
+                        <div class="div6 divs"><button>Examination</button> </div>
+                        <div class="div7 divs"><button>PFSH</button> </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>Diagnosis</button> </div>
+                        <div class="div6 divs"><button>Advice</button> </div>
+                        <div class="div7 divs"><button>RX</button> </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>Bills</button> </div>
+                        <div class="div6 divs"><button>Appointment</button> </div>
+                        <div class="div7 divs"><button>Certificate</button> </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>Advice</button> </div>
+                        
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><h1>IPD Consultation</h1> </div>
+                        
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>Registration</button> </div>
+                        <div class="div6 divs"><button>Complaint</button> </div>
+                        <div class="div7 divs"><button>PFSH</button> </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>Examination</button> </div>
+                        <div class="div6 divs"><button>Diagnosis</button> </div>
+                        <div class="div7 divs"><button>Round Note</button> </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>Ot schedule</button> </div>
+                        <div class="div6 divs"><button>Procedure notes</button> </div>
+                        <div class="div7 divs"><button>Discharge summary</button> </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>View Ot schedule</button> </div>
+                        <div class="div6 divs"><button>view Bed status </button> </div>
+                        <div class="div6 divs">  </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><h1>Billings</h1> </div>
+                        
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>Estimate billing</button> </div>
+                        <div class="div6 divs"><button>OPD billing</button> </div>
+                        <div class="div7 divs"><button> IPD billing</button> </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button> open/close Cash entry</button> </div>
+                        <div class="div6 divs"><button>Receipt </button> </div>
+                        <div class="div7 divs"><button> Refund </button> </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>View all Estimate </button> </div>
+                        <div class="div6 divs"><button>View all OPD billing</button> </div>
+                        <div class="div7 divs"><button>View all IPD billing</button> </div>
+                    </div>
+                    <div class="flex-container3">
+
+                        <div class="div5 divs"><button>View all Refund</button> </div>
+                        <div class="div6 divs"><button>View all Receipt</button> </div>
+                        <div class="div7 divs"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+    </div>
+
+
+    <div class="rightpart"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    </div>
+
+
+</body>
+
+</html>

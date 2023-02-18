@@ -1,0 +1,110 @@
+{% extends 'ipd_registration.html' %} 
+{% block body %}
+<form action="/Update/{{ipd_registration.id}}" method="POST">
+    {% csrf_token %}
+<div class="">
+    <div class="">
+        <div class="flex-container3">
+
+            <div class="div5 divs ">
+                
+                
+                  <input type="text" name="id" class="form-control" name="" value="{{ipd_registration.id}}" readonly id=""
+                    placeholder="ID ">
+            </div>
+            <div class="div5 divs ">
+                 <input type="text"  onfocus="(this.type = 'time')" name="registration_time" class="form-control" value="{{ipd_registration.time}}"  id="time" placeholder="Registration Time"></div>
+            <div class="div6 divs">
+                <input placeholder="Registration Date" name="registration_date" type="text"
+                onfocus="(this.type = 'date')" value="{{ipd_registration.date}}"  id="date" class="form-control"> </div>
+            <div class="div7 divs"> <input name="patient_category" placeholder=" Patient_Category"
+                    class="form-control" value="{{ipd_registration.patient_category}}"  type="text"> </div>
+        </div>
+        {% comment %} <div class="flex-container3">
+
+            <div class="div5 divs"><input name="admission_number" placeholder="Admission_number"
+                    class="form-control" value="{{ipd_registration.admission_number}}"  type="text"> </div>
+            <div class="div6 divs"> <input name="admission_For" placeholder="Admission For"
+                    class="form-control" value="{{ipd_registration.admission_for}}"  type="text"></div>
+            <div class="div7 divs"><input name="referred_by" placeholder="Referred by" class="form-control"
+                value="{{ipd_registration.referred_by}}"  type="text"></div>
+        </div>
+        <div class="flex-container3">
+
+            <div class="div5 divs"><input name="dr_name" placeholder="Dr Name" class="form-control"
+                value="{{ipd_registration.dr_name}}"  type="text"> </div>
+            <div class="div6 divs"> <input name="consultant_dr" placeholder="2 consultant Dr"
+                    class="form-control" value="{{ipd_registration.consultant_dr}}"  type="text"></div>
+            <div class="div7 divs"><input name="reason_for_admission" placeholder="Reason for Admission"
+                    class="form-control" value="{{ipd_registration.reason_for_admission}}"  type="text"> </div>
+        </div>
+        <div class="flex-container3">
+
+            <div class="div5 divs"><input name="package_name" placeholder="Package name"
+                    class="form-control" value="{{ipd_registration.package_name}}"  type="text"> </div>
+            <div class="div6 divs"> <input name="admit_condition" placeholder="Admit Condition"
+                    class="form-control" value="{{ipd_registration.admit_condition}}"  type="text"></div>
+            <div class="div7 divs ">
+
+                <div class="ward">
+                    <div class="input">
+                        <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span> -->
+                        <select name="ward" class="form-control selectpicker" value="{{ipd_registration.ward}}" >
+                            <option value="" style="text-align: center;">ward ⇓</option>
+                            <option>C</option>
+                            <option>B</option>
+                            <option>A</option>
+                            
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="flex-container3">
+
+            <div class="div5 divs"><input name="relative_name" placeholder="Relative name"
+                    class="form-control" value="{{ipd_registration.relative_name}}"  type="text"> </div>
+            <div class="div6 divs"> <input name="relation" placeholder="Relation" class="form-control"
+                value="{{ipd_registration.relation}}" type="text"></div>
+            <div class="div7 divs ">
+                <div class="ward">
+                <div class="input">
+                    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span> -->
+                    <select name="bed" class="form-control selectpicker" value="{{ipd_registration.bed}}">
+                        <option value="" style="text-align: center;">Bed ⇓</option>
+                        <option>C</option>
+                        <option>B</option>
+                        <option>A</option>
+                        
+                    </select>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="flex-container3">
+
+            <div class="div5 divs"><input name="relative_phone_number" placeholder="Relative Phone Number"
+                value="{{ipd_registration.relative_phone_number}}" class="form-control" type="text"> </div>
+            <div class="div6 divs"> <input name="address_of_relative" placeholder="Address of Relative"
+                value="{{ipd_registration.address_of_relative}}" class="form-control" type="text"> </div>
+            <div class="div7 divs"> </div>
+        </div> {% endcomment %}
+        <div class="flex-container3">
+
+            <div class="div5 divs"><button>clear </button> <button>save</button> </div>
+            <div class="div6 divs"> </div>
+            <div class="div7 divs"> </div>
+        </div>
+    </div>
+
+</div>
+
+</form>
+{% comment %} {% if messages %}
+{%for mess in messages %}
+<b>{{mess}}</b>
+{% endfor %}
+{% endif %} {% endcomment %}
+
+ {% endblock body %}
